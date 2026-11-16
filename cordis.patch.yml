@@ -1,0 +1,22 @@
+# Replace previously declared standalone UI entries without changing their source configuration.
+- id: codex-ui-session-title
+  disabled: true
+- id: codex-ui-settings-skin
+  disabled: true
+- id: codex-ui-composer
+  disabled: true
+- id: codex-ui-sidebar
+  disabled: true
+- id: codex-ui-theme
+  disabled: true
+- id: codex-ui-desktop-menu
+  disabled: true
+- id: codex-ui
+  disabled: true
+- id: conv-progress
+  disabled: true
+- id: sidebar-status
+  disabled: true
+- insert:
+    - id: ui-workbench
+      name: dsh-ui-workbench

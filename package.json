@@ -1,0 +1,100 @@
+{
+  "name": "dsh-ui-workbench",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "DSH 界面工作台：整合 Codex UI、会话进度、六图标侧栏、标题菜单与紧凑工具栏",
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "main": "./lib/index.mjs",
+  "exports": {
+    ".": "./lib/index.mjs",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./icon": "./icon.svg",
+    "./locale/en.json": "./locale/en.json",
+    "./locale/zh.json": "./locale/zh.json"
+  },
+  "files": [
+    "lib",
+    "vendor",
+    "scripts",
+    "cordis.patch.yml",
+    "integrity.json",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "locale",
+    "icon.svg"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-client-connection": ">=0.2.0-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-locale": ">=0.2.0-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-ui-conversation": ">=0.2.0-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-ui-input-trigger": ">=0.2.0-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-ui-layout": ">=0.2.0-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-ui-primitives": ">=0.2.0-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-ui-settings": ">=0.2.0-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-ui-settings-general": ">=0.2.0-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-ui-sidebar": ">=0.2.0-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-ui-slots": ">=0.2.0-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-ui-theme": ">=0.2.0-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-ui-workspace": ">=0.2.0-rc.1 <0.3.0-0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@deepseek-ai/dsh-typert-protocol": "^0.1.0-rc.6 || ^0.1.5-rc.1 || ^0.2.0-rc.1",
+    "@deepseek-ai/schemastery": "^3.18.1",
+    "cordis": ">=4.0.2 <5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-input-trigger",
+        "@deepseek-ai/dsh-session",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "author": {
+    "name": "zk",
+    "url": "https://github.com/zktothetop-sys"
+  },
+  "homepage": "https://github.com/zktothetop-sys/dsh-ui-workbench#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zktothetop-sys/dsh-ui-workbench.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zktothetop-sys/dsh-ui-workbench/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "ui",
+    "workbench",
+    "codex",
+    "sidebar",
+    "conversation-progress",
+    "界面",
+    "侧边栏",
+    "工作台"
+  ],
+  "icon": "./icon.svg"
+}

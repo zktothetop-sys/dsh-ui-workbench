@@ -1,0 +1,57 @@
+{
+  "name": "dsh-conv-progress",
+  "version": "0.3.0",
+  "description": "Live per-turn progress capsule for DeepSeek Harness: host-side session-event analysis with an empirical ETA table, rendered under the composer, with a click-to-open turn history.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/estimator.test.mjs test/history.test.mjs"
+  },
+  "license": "BSD-3-Clause",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-typert-protocol": "^0.1.0-rc.6 || ^0.1.5-rc.1 || ^0.2.0-rc.1",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "progress",
+    "progress-bar",
+    "eta",
+    "session-events"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/picklerick422/dsh-conv-progress.git"
+  },
+  "homepage": "https://github.com/picklerick422/dsh-conv-progress#readme",
+  "bugs": {
+    "url": "https://github.com/picklerick422/dsh-conv-progress/issues"
+  }
+}
